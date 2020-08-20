@@ -1,0 +1,163 @@
+<html> 
+<head>   
+<style>
+body
+{
+margin:0;
+padding:0;
+background:#efefef;
+font-size:16px;
+color:#777;
+font-family:sans-serif;
+font-weight:300;
+}
+#login-box
+{
+position:relative;
+margin:5% auto;
+height:400px;
+width:600px;
+background:#fff;
+box-shadow:0 2px 4px rgb(0,0,0,0.6);
+}
+.left-box
+{
+position:absolute;
+top:0;
+box-sizing:border-box;
+padding:40px;
+width:300px;
+height:400px;
+}
+ .right-box
+{
+position:absolute;
+top:0;
+right:0;
+box-sizing:border-box;
+padding:40px;
+width:300px;
+height:400px;
+background-color:red;
+background-size:cover;
+background-position:center;
+}
+h1
+{
+margin:0 0 20px 0;
+font-weight:300;
+font-size:28px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+display:block;
+box-sizing:border-box;
+margin-bottom:20px;
+padding:4px;
+width:220px;
+height:32px;
+border:none;
+outline:none;
+border-bottom:1px solid #aaa;
+font-family:sans-serif;
+font-weight:400;
+font-size:15px;
+transition:0.2s ease;
+}
+input[type="SUBMIT"]
+{
+margin-bottom:28px;
+width:120px;
+height:32px;
+background:#f44336;
+border:none;
+border-radius:2px;
+color:#fff;
+font-family:sans-serif;
+font-weight:500;
+text-transform:uppercase;
+transition:0.2s ease;
+cursor:pointer;
+}
+
+input[type="SUBMIT"]:hover;
+input[type="SUBMIT"]:focus;
+{
+background:#ff5722;
+transition:0.2s ease;
+}
+
+.or
+{
+    position:absolute;
+    top:180px;
+    left:280px;
+    width:40px;
+    height:40px;
+    background:#efefef;
+    border-radius:50%;
+    box-shadow:0 2px 4px rgba(0,0,0,0.6);
+    line-height:40px;
+    text-align:center;
+}
+.right-box .signinwith
+{
+    display:block;
+    margin-bottom:40px;
+    font-size:28px;
+    color:#fff;
+    text-align:center;
+    text-shadow:0 2px 4px rgba(0,0,0,0.6);
+}
+
+button.social
+{
+    margin-bottom:20px;
+    width:220px;
+    height:36px;
+    border:none;
+    border-radius:2px;
+    color:#fff;
+    font-family:sans-serif;
+    font-weight:500;
+    transition:0.2s ease;
+    cursor:pointer;
+}
+
+.signin
+{
+    background:blue;
+}
+.signup
+{
+    background:green;
+}
+
+</style>
+</head>  
+<body>
+<div id="login-box">
+<div class="left-box">
+<h1> Sign Up</h1>
+<form action="http://localhost:5000/fetchdata", method='POST'>   
+Name:
+<input type="text" name="username" size="15"/><br>
+Email:&nbsp;&nbsp;&nbsp;&nbsp;  
+<input type="email" id="email" name="email"/> <br> 
+Password:  
+<input type="Password" id="pass" name="pass"> <br>  
+<center><input type="Submit" value="Submit"/> </center>
+<center><h1 style="color:green"><strong>{{message}}</strong></h1></center>
+</form>
+</div>
+<div class="right-box">
+<span class="signinwith"></span>
+<button class="social signin">Sign in</button>
+<button class="social signup">Sign up</button>
+</div>
+<div class="or">OR</div>
+</body>  
+</html>
